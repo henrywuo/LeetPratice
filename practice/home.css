@@ -1,23 +1,12 @@
 /* home.css handles all of the styling for the home page. It handles
 the styling for classes such as the grid of images. */
 
-.home-container {
-    position: absolute;
-    width: 100%;
-}
 
 
 
 
-.foodcontent{
-    height: 276px;
-    width: 276px;    
-}
 
 
-.foodcontent:hover .middle {
-    opacity: 0.9;
-}
 
 .grid { 
     text-align: center;
@@ -30,17 +19,6 @@ the styling for classes such as the grid of images. */
     grid-gap: 3px;
 }
 
-.image {
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    width: 276px; 
-    height: 276px;
-    object-fit: cover;
-
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
 
 .middle {
     opacity: 0;
