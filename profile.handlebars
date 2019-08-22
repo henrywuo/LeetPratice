@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Profile</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/profile.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+	</head>
+
+	{{> cancelNavbar}}
+
+	<body>
+		<div class="container d-flex justify-content-center align-items-center">
+			<div class="grid">
+				<div class="row">
+					<div class="col col-xs-6">
+						<h3 id="fullName">{{data.name}}</h3>
+						<p id="email">{{data.email}}</p>
+						<p id="username">{{data.username}}</p>
+					</div>
+				
+				<div class="col col-xs-6">
+						<img class="member_image" src="{{data.image}}">
+					</div>
+				</div>
+
+				<div class="text-center">
+					<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Clear Data</button>
+					<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Delete Account</button>
+				</div>
+				<div class="row">
+					<div class="col col-xs-8">
+						<img class="tree_image" src="http://www.topnotchenterprises.ca/wp-content/uploads/2018/03/tree-icon.png">
+					</div>
+				</div>
+			</div>
+			
+			
+
+		</div>
+	</body>
+
+</html>

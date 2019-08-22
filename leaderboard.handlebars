@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Leaderboard</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/leaderboard.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+		<script src="/js/leaderboardQuery.js"></script>
+	</head>
+
+	{{> navbar}}
+
+	<body>
+		<div class="container text-center w-100">
+			<h1>Leaderboard</h1>
+			<h4>Your Rank:</h4>
+			<div id="count">{{rank}}</div>
+
+
+			<!-- Table for Leaderboard-->
+			<div class="table-responsive text-center">
+				<!-- Y Scroll-->
+				<table id="leaderboard" class="table table-hover">
+					<thead>
+						<tr>
+							<th>Rank</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--Add JSON Data to leaderboard-->
+						{{#each data.leaderboard}}
+						<tr>
+							<td>{{rank}}</td>
+							<td>{{name}}</td>
+							<td>{{score}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+
+			<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
+				data-toggle="modal" data-target="#uploadModal">
+		</div>
+
+		{{> upload}}
+
+	</body>
+
+</html>
