@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/jquery-1.11.0.js"></script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">Home</a>
+            <a class="b" href="#">About Me</a>
+            <a class="c" href="#">Projects</a>
+        </div>
+
+        <div class="content">
+            <div class="home">
+                <h1>Henry W. Ou</h1>
+                <h2>Web Designer</h2>
+            </div>
+        </div>
+
+        <div class= "about">
+            <p>
+                Hello Friends,<br>
+                I am a graduating senior at UCSD,
+                <br> My major is Cognitive Science Specializing in Human Computer Interaction.
+                <br> I know how to use HTML, JavaScript, and CSS.
+            </p>
+        </div>
+
+    </div>
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a').click(function () {
+                //alert("i am click");
+                var selected = $(this);
+                $('a').removeClass('active')
+                $(selected).addClass('active')
+            });
+
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $home = $('.home'),
+            $about = $('.about');
+
+            $a.click(function(){
+                $home.fadeIn();
+                $about.fadeOut();
+            });
+            $b.click(function(){
+                $home.fadeOut();
+                $about.fadeIn();
+            });
+            $c.click(function(){
+                $home.fadeOut();
+                $about.fadeOut();
+            });
+        });
+    </script>
+</body>
+
+</html>
